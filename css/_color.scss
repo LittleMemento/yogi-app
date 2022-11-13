@@ -1,0 +1,8 @@
+$bgColor: #120d26;
+$globalColor: #ff0000;
+$whiteColor: #fff;
+
+@mixin ash {
+  color: $whiteColor;
+  opacity: 0.5;
+}

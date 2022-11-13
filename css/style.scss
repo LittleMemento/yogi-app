@@ -1,0 +1,260 @@
+@import "./global";
+
+// navbar
+
+.navbar {
+  width: 100%;
+  @include block();
+  padding: 25px 150px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+  background-color: $bgColor;
+  .logo {
+    font-weight: 700;
+    font-size: 48px;
+    letter-spacing: 0.5px;
+    color: $globalColor;
+  }
+  .nav_menu {
+    width: 40%;
+    @include block();
+    .menu_links {
+      @include ash();
+      font-weight: 600;
+      font-size: $fontSizeMd;
+      letter-spacing: 0.5px;
+      transition: $globalTransition;
+      &:hover {
+        opacity: 1;
+      }
+    }
+    .btn_login {
+      @include login();
+      transition: $globalTransition;
+      &:hover {
+        background-color: $globalColor;
+        color: $whiteColor;
+      }
+    }
+    .btn_signup {
+      @include signup();
+    }
+  }
+}
+
+// header
+
+.header {
+  width: 100%;
+  @include block();
+  padding: 100px 150px;
+  .text_side {
+    width: 50%;
+    h1 {
+      font-weight: 700;
+      font-size: $fontSizeXL;
+      color: $whiteColor;
+      letter-spacing: 0.5px;
+      line-height: 90px;
+    }
+    p {
+      font-weight: 400;
+      font-size: $fontSizeX;
+      @include ash();
+      margin-top: 30px;
+      line-height: 30px;
+    }
+    .btn_group {
+      display: flex;
+      align-items: center;
+      margin-top: 50px;
+      .btn_tryfree {
+        @include btnGlobal();
+      }
+      .link_text {
+        font-weight: 600;
+        font-size: $fontSizeMd;
+        color: $whiteColor;
+        margin-left: 50px;
+      }
+    }
+  }
+  .img_side {
+    width: 40%;
+  }
+}
+
+// main
+
+.main {
+  width: 100%;
+}
+
+// section
+
+.sponsor {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 50px 150px;
+  background-color: $whiteColor;
+  p {
+    font-weight: 400;
+    font-size: $fontSizeX;
+    color: $bgColor;
+  }
+  .spon_group {
+    width: 100%;
+    @include block();
+    margin-top: 50px;
+  }
+}
+
+// =====
+
+.pricing {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 100px 150px;
+  h2 {
+    font-weight: 700;
+    font-size: $fontSizeX2;
+    letter-spacing: 0.5px;
+    color: $whiteColor;
+  }
+  .p {
+    font-weight: 600;
+    font-size: $fontSizeMd;
+    @include ash();
+    margin-top: 20px;
+  }
+  .card_group {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-top: 50px;
+    .card_box {
+      width: 31%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 50px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+      margin-top: 50px;
+      b {
+        font-weight: 700;
+        font-size: $fontSizeXm;
+        color: $whiteColor;
+        letter-spacing: 0.5px;
+      }
+      h3 {
+        font-weight: 600;
+        font-size: $fontSizeX2;
+        margin-top: 20px;
+        color: $globalColor;
+      }
+      p {
+        font-weight: 500;
+        font-size: $fontSizeMd;
+        @include ash();
+        margin-top: 20px;
+        margin-bottom: 25px;
+      }
+      .span_group {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        span {
+          display: flex;
+          align-items: center;
+          margin-top: 15px;
+          i {
+            font-size: $fontSizeXm;
+          }
+          small {
+            font-weight: 500;
+            font-size: $fontSizeMd;
+            margin-left: 10px;
+            color: $whiteColor;
+          }
+        }
+      }
+      .btn_buy {
+        @include btnGlobal();
+        margin-top: 50px;
+      }
+    }
+  }
+}
+
+// =====
+
+.our_users {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 100px 150px;
+  h2 {
+    font-weight: 700;
+    font-size: $fontSizeX2;
+    letter-spacing: 0.5px;
+    color: $whiteColor;
+  }
+  .card_group {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-top: 50px;
+    .card_box { 
+      width: 31%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 50px 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+      margin-top: 50px;
+      b {
+        font-weight: 700;
+        font-size: $fontSizeXm;
+        color: $whiteColor;
+        letter-spacing: 0.5px;
+        line-height: 40px;
+      }
+      p {
+        font-weight: 500;
+        font-size: $fontSizeMd;
+        @include ash();
+        margin-top: 20px;
+      }
+      span {
+        display: flex;
+        align-items: center;
+        margin-top: 30px;
+        i {
+          font-size: $fontSizeXm;
+        }
+      }
+      small {
+        font-weight: 500;
+        font-size: $fontSizeSm;
+        color: $whiteColor;
+        margin-top: 30px;
+      }
+    }
+  }
+}
