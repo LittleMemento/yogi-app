@@ -218,7 +218,7 @@
     align-items: flex-start;
     justify-content: space-between;
     margin-top: 50px;
-    .card_box { 
+    .card_box {
       width: 31%;
       display: flex;
       flex-direction: column;
@@ -230,7 +230,7 @@
       margin-top: 50px;
       b {
         font-weight: 700;
-        font-size: $fontSizeXm;
+        font-size: $fontSizeXs;
         color: $whiteColor;
         letter-spacing: 0.5px;
         line-height: 40px;
@@ -256,5 +256,138 @@
         margin-top: 30px;
       }
     }
+  }
+}
+
+// =====
+
+.develop {
+  width: 100%;
+  @include block();
+  padding: 100px 150px;
+  .text_side {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    h2 {
+      font-weight: 700;
+      font-size: $fontSizeX2;
+      color: $whiteColor;
+      letter-spacing: 0.5px;
+      line-height: 60px;
+    }
+    p {
+      font-weight: 600;
+      font-size: $fontSizeMd;
+      margin-top: 20px;
+      @include ash();
+      line-height: 30px;
+    }
+    .btn_learn {
+      @include btnGlobal();
+      margin-top: 50px;
+    }
+  }
+  .img_side {
+    width: 50%;
+    @include block();
+    flex-wrap: wrap;
+    img {
+      margin-top: 50px;
+      &:nth-child(1) {
+        width: 50%;
+      }
+      &:nth-child(2) {
+        width: 40%;
+      }
+      &:nth-child(3) {
+        width: 40%;
+      }
+      &:nth-child(4) {
+        width: 50%;
+      }
+    }
+  }
+}
+
+// =====
+
+.digital {
+  width: 100%;
+  padding: 100px 150px;
+  .text_side {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 100px 200px;
+    border-radius: 30px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+    h2 {
+      font-weight: 700;
+      font-size: $fontSizeX2;
+      color: $whiteColor;
+      letter-spacing: 0.5px;
+      line-height: 60px;
+    }
+    p {
+      @include ash();
+      font-weight: 600;
+      font-size: $fontSizeMd;
+      line-height: 30px;
+      margin-top: 30px;
+    }
+    .btn_try {
+      @include btnGlobal();
+      margin-top: 50px;
+    }
+  }
+}
+
+// footer
+
+.footer {
+  width: 100%;
+  @include block();
+  text-align: center;
+  flex-wrap: wrap;
+  padding: 50px 150px;
+  .foot_menu {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+    b{
+      font-weight: 600;
+      font-size: $fontSizeX;
+      color: $whiteColor;
+      letter-spacing: 0.5px;
+    }
+    .menu_links {
+      width: 100%;
+      @include block();
+      justify-content: space-around;
+      margin-top: 30px;
+      a {
+        font-weight: 600;
+        @include ash();
+        transition: $globalTransition;
+        &:hover {
+          opacity: 1;
+        }
+      }
+    }
+  }
+  small {
+    width: 100%;
+    font-weight: 600;
+    font-size: $fontSizeMd;
+    color: $whiteColor;
+    letter-spacing: 0.5px;
+    margin-top: 50px;
+    border-top: 2px solid $whiteColor;
+    padding-top: 20px;
   }
 }
